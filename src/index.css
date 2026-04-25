@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --shadow-bento: 8px 8px 0px rgba(15, 23, 42, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+}
+
+.bento-card {
+  @apply bg-white border-2 border-slate-200 rounded-3xl p-6 shadow-bento transition-all duration-300;
+}
+
+.bento-card-dark {
+  @apply bg-slate-900 text-white border-2 border-slate-900 rounded-3xl p-6 shadow-bento;
+}
+
+.bento-card-accent {
+  @apply bg-blue-600 text-white border-2 border-blue-600 rounded-3xl p-6 shadow-bento;
+}
+
+.bento-card-primary {
+  @apply border-slate-900;
+}
+
+.stat-label {
+  @apply text-[10px] font-bold uppercase tracking-widest text-slate-400;
+}
+
+.stat-value {
+  @apply font-mono tracking-tight;
+}
